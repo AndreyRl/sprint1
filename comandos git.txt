@@ -1,0 +1,19 @@
+ls -a
+
+git clone
+
+git config 
+
+-git config -- user.email andrey.ordelino@sptech.school
+-git config -- user.name AndreyRl
+
+git add .
+
+git status
+
+git commit -m
+
+git push
+
+git config --global --unset user.email
+git config --global --unset user.name
