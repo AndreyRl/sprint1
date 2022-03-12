@@ -1,6 +1,6 @@
-CREATE DATABASE sprint_1;
+CREATE DATABASE Betta;
 
-USE sprint_1;
+USE Betta;
 
 CREATE TABLE empresa (
 id_empresa INT PRIMARY KEY AUTO_INCREMENT,
