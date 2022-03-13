@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprint Calculadora</title>
 </head>
+
 <body bgcolor="000000" style="margin: 10px;">
-
-    <img src="logo_ccexpress.png" alt="" height="70px" style = margin:15px;>
-<<<<<<< HEAD
-     <span ><h3 style="color: CornflowerBlue; margin: 7px;">BETTA</h3></span>
+    <img src="logo_ccexpress.png" alt="" height="70px" style=margin:15px;>
+    <span>
+        <h3 style="color: CornflowerBlue; margin: 7px;">BETTA</h3>
+    </span>
     <div style="background-color: rgb(212, 212, 212);"> <br>
+        <h1 style="text-align: center;"><u><i>Aumente seu lucro e evite prejuizo no transporte dos seus pescados.
+                    🐟</i></u></h1> <br>
 
-    <img src="investimento.png" alt="" style="height: 700px; float: right;">
+        <img src="investimento.png" alt="" style="height: 720px; float: right;">
 
-    <h1 style="text-align: center;"><u><i>Aumente seu lucro e evite prejuizo no transporte dos seus pescados. 🐟</i></u></h1>
-=======
-        <span ><h3 style="color: CornflowerBlue; margin: 7px;">BETTA</h3></span>
+        <b style="margin: 10px;">Quantidade de pescados transportados por viagem:</b> <br>
+        <input id="qtd_pescado_transportado" style="margin: 10px;"> <br><br>
 
-    <div style="background-color: rgb(212, 212, 212);">
-        <h1 style="text-align: center;"><u><i>Aumente seu lucro e evite prejuizo no transporte dos seus pescados. 🐟</i></u></h1>
->>>>>>> 0f4cf81a9efad1ce33e11ff522b3110a1460523d
+        <b style="margin: 10px;">Valor unitario do pescado:</b><br>
+        <input id="valor_pescado" style="margin: 10px;"><br><br>
 
- <b style="margin: 10px;">Quantidade de pescados transportados por viagem:</b> <br>
-    <input id="qtd_pescado_transportado" style="margin: 10px;"> <br><br>
+        <b style="margin: 10px;">Quantidade de pescado perdido:</b> <br>
+        <input id="perca_pescado" style="margin: 10px;"><br>
+        <br>
+        <button onclick="calcular()" style='background-color: red;margin: 10px;'><b>Calcular</b></button><br><br>
 
-<b style="margin: 10px;">Valor unitario do pescado:</b><br>
-    <input id="valor_pescado" style="margin: 10px;"><br><br>
-
-<b style="margin: 10px;">Quantidade de pescado perdido:</b> <br>
-    <input id="perca_pescado" style="margin: 10px;"><br>
-    <br>
-<button onclick="calcular()" style='background-color: red;margin: 10px;' ><b>Calcular</b></button><br><br>
-
-    <span style="margin: 10px;" id="span_text"></span>
+        <span style="margin: 10px;" id="span_text"></span>
 
 </body>
+
 </html>
 
 <script>
     function calcular() {
-        var qtd = Number (qtd_pescado_transportado.value);
-        var valor = Number (valor_pescado.value);
-        var perda = Number (perca_pescado.value);
-        var soma = ((qtd - perda) * valor );
+        var qtd = Number(qtd_pescado_transportado.value);
+        var valor = Number(valor_pescado.value);
+        var perda = Number(perca_pescado.value);
+        var soma = ((qtd - perda) * valor);
 
         span_text.innerHTML = `R$ ${soma.toFixed(2)}`;
     }
 </script>
 
 <html>
-    <body>
-        <h3 style="margin: 5px;">Lucros futuros</h3>
-        <b style="margin: 10px;">Quantidade de pescados transportados por viagem:</b> <br>
-            <input id="pescados_transportados" style="margin: 10px;" ><br><br>
 
-        <b style="margin: 10px;">Valor unitário do pescado:</b><br>
-            <input id="perca_unitaria" style="margin: 10px;"><br><br>
+<body>
+    <h3 style="margin: 5px;">Lucros futuros</h3>
+    <b style="margin: 10px;">Quantidade de pescados transportados por viagem:</b> <br>
+    <input id="pescados_transportados" style="margin: 10px;"><br><br>
 
-        <b style="margin: 10px;">Conversão de quantidade perdida:</b> <br>
-            <input id="perca_de_transporte" style="margin: 10px;" ><br>
-        <br>
-            <button onclick="reducao()" style="background-color: green; margin: 10px;"><b>Redução de prejuízo</b></button><br><br>
-                <span style="margin: 10px;" id="span2_text"> Eficiência com os serviços BETTA </span> <br><br>
+    <b style="margin: 10px;">Valor unitário do pescado:</b><br>
+    <input id="perca_unitaria" style="margin: 10px;"><br><br>
+
+    <b style="margin: 10px;">Conversão de quantidade perdida:</b> <br>
+    <input id="perca_de_transporte" style="margin: 10px;"><br>
+    <br>
+    <button onclick="reducao()" style="background-color: green; margin: 10px;"><b>Redução de
+            prejuízo</b></button><br><br>
+    <span style="margin: 10px;" id="span2_text"> Eficiência com os serviços BETTA </span> <br><br>
 
 
 
 
-    </body>
+</body>
+
 </html>
 
 <script>
     function reducao() {
-        var pesc = Number (pescados_transportados.value);
-        var unitario = Number (perca_unitaria.value);
-        var transp = Number (perca_de_transporte.value * 0.15);
+        var pesc = Number(pescados_transportados.value);
+        var unitario = Number(perca_unitaria.value);
+        var transp = Number(perca_de_transporte.value * 0.15);
         var reduc = (pesc - transp) * unitario;
 
         span2_text.innerHTML = `R$${reduc.toFixed(2)}`
