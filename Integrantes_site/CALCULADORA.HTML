@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+
+<div>
+
+
+    <img src="logo_ccexpress.png" alt="" height="70px" style="margin: 10px;" > <br>
+    <span style="color: #63A9ED; font-size: 30px;"> Betta</span>
+
+
+</div>
+
+<body bgcolor="#1c1c1c">
+    
+    <div style="background-color: #D3D3D3; text-align: center;">
+        <h2>Calcule sua nova estimativa de perda:</h2><br>
+            <h4>Com este calculo você pode ter noção de quanto que <br>
+                você terá de lucro com nossos serviços.</h4>
+
+        <span>Entre com a quantidade de peixes:</span><br>
+            <span>🐟</span>
+                <input type="text" name="" id="qtd_peixe" placeholder="Ex: 4000">
+             <br><br>
+
+        <span>Entre com a quantidade de perda de peixes durante o transporte:</span><br>
+            <span>🐟</span>
+                <input type="text" name="" id="qtd_perda" placeholder="Ex: 300">
+             <br><br>
+
+        <span>Entre com o valor da unitário de quanto sai cada peixe:</span><br>
+            <span>🐟</span>
+                <input type="text" name="" id="qtd_valor" placeholder="Ex: 2 ou 2.8 ">
+             <br><br>
+
+        <button onclick="calcular()" style="background-color: black; color: white;"><b>Calcular</b></button>
+         <br><br>
+
+
+
+        <span id="span_text"></span> <br><br>
+        <span id="span_text2"></span> <br><br>
+        <img src="investimento.png" alt="" style=" width: 250px; ">
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+    function calcular() {
+        // var final = (qtd_peixe.value - qtd_perda.value) / qtd_valor.value 
+        var peixe           = Number(qtd_peixe.value)
+        var perda_inicial   = Number(qtd_perda.value)
+        var perda_final     = Number(qtd_perda.value * 0.15)
+        var valor           = Number(qtd_valor.value)
+        var ax_cont         =       (peixe - perda_inicial) * valor
+        var ax_cont1        =       (peixe - perda_final) * valor
+
+        span_text.innerHTML = `Sua perda sem nossos serviços é de:R$${ax_cont.toFixed(2)}.`;
+
+        span_text2.innerHTML = `<span style="color: green;">Conosco você salva 85% da sua perda de pescados, durante    <br>
+                                o transporte, e consequentemente aumentando seu lucro.      <br>
+                                Lucro final: R$${ax_cont1.toFixed(2)}.)</span>`;
+
+        
+    }
+
+</script>
