@@ -14,7 +14,6 @@ cep CHAR (8)
 
 CREATE TABLE dado_sensor (
 id_sensor INT PRIMARY KEY AUTO_INCREMENT,
-tipo_sensor varchar(50),
 temperatura DOUBLE,
 dt_temp DATETIME
 );
