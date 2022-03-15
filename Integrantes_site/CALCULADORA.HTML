@@ -18,26 +18,26 @@
 
 </div>
 
-<body bgcolor="#1c1c1c">
+<body bgcolor="#1C1C1C">
     
     <div style="background-color: #D3D3D3; text-align: center;">
-        <h2>Calcule sua nova estimativa de perda:</h2><br>
-            <h4>Com este calculo você pode ter noção de quanto que <br>
-                você terá de lucro com nossos serviços.</h4>
+        <h2>Calcule sua nova estimativa de lucro:</h2>
+            <h4>Com este calculo, você pode ter noção de quanto que <br>
+                terá de lucro com nossos serviços.</h4>
 
-        <span>Entre com a quantidade de peixes:</span><br>
+        <span>Entre com a quantidade total de peixes no transporte:</span><br>
             <span>🐟</span>
-                <input type="text" name="" id="qtd_peixe" placeholder="Ex: 4000">
+                <input type="text" name="" id="qtd_peixe" placeholder="total de peixes no transporte">
              <br><br>
 
-        <span>Entre com a quantidade de perda de peixes durante o transporte:</span><br>
+        <span>Entre com a quantidade da perda de seus peixes, durante o transporte:</span><br>
             <span>🐟</span>
-                <input type="text" name="" id="qtd_perda" placeholder="Ex: 300">
+                <input type="text" name="" id="qtd_perda" placeholder="Perda no transporte">
              <br><br>
 
-        <span>Entre com o valor da unitário de quanto sai cada peixe:</span><br>
+        <span>Entre com o valor unitário de seus peixes:</span><br>
             <span>🐟</span>
-                <input type="text" name="" id="qtd_valor" placeholder="Ex: 2 ou 2.8 ">
+                <input type="text" name="" id="qtd_valor" placeholder="Valor de seus peixes R$">
              <br><br>
 
         <button onclick="calcular()" style="background-color: black; color: white;"><b>Calcular</b></button>
@@ -66,10 +66,10 @@
         var ax_cont         =       (peixe - perda_inicial) * valor
         var ax_cont1        =       (peixe - perda_final) * valor
 
-        span_text.innerHTML = `Sua perda sem nossos serviços é de:R$${ax_cont.toFixed(2)}.`;
+        span_text.innerHTML = `Sua lucro sem nossos serviços é de:R$${ax_cont.toFixed(2)}.`;
 
-        span_text2.innerHTML = `<span style="color: green;">Conosco você salva 85% da sua perda de pescados, durante    <br>
-                                o transporte, e consequentemente aumentando seu lucro.      <br>
+        span_text2.innerHTML = `<span style="color: green;">Conosco você salva 85% da sua perda de pescados durante    <br>
+                                o transporte, e consequentemente aumentando seus rendimentos.                          <br>
                                 Lucro final: R$${ax_cont1.toFixed(2)}.)</span>`;
 
         
